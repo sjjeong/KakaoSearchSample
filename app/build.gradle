@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -30,6 +31,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        dataBinding true
+    }
 }
 
 dependencies {
@@ -47,4 +51,7 @@ dependencies {
     implementation 'androidx.activity:activity-ktx:1.2.0-rc01'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation project(":kakao_search")
+
+    implementation 'com.dino.library:simplerecyclerview:0.7.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
 }
